@@ -1,5 +1,23 @@
 extends layout
 
+mixin renderItems(items)
+  ul
+    each item, i in items
+      li
+        input(type='checkbox', name='#{item.name}')
+        | #{item.name}
+        if item.resources
+          ul
+            each resource in item.resources
+              li
+                a(href="#{resource.link}", target="_blank") #{resource.name}
+
+        if item.items
+          mixin renderItems(item.items)
+
 block content
   h1= title
-  p Welcome to #{title}
+
+  mixin renderItems(items)
+    
+

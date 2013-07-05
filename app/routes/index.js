@@ -4,5 +4,6 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'The Checkers Project' });
+  var parsedJSON = require('../public/lists/sample.json');
+  res.render('index', { title: 'The Checkers Project', items: parsedJSON });
 };

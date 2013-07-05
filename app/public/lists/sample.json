@@ -1,0 +1,77 @@
+[{
+	"name":"Best practices",
+	"items":[
+		{"name": "Fix broken links",
+		 "resources":[
+			{"name":"W3C link checker", 
+			 "link":"http://validator.w3.org/checklink"},
+			{"name":"iWebTool Broken Link Checker", 
+			 "link":"http://iwebtool.com/broken_link_checker"}
+		 ]
+		},
+		{"name": "Spelling and grammar",
+		 "resources":[
+			{"name":"Capitalization",
+			 "link":"http://en.wikipedia.org/wiki/Capitalization"},
+			{"name":"Writing Style",
+			 "link":"http://en.wikipedia.org/wiki/Writing_style"},
+			{"name":"Word Variations e.g. UK vs US",
+			 "link":"http://en.wikipedia.org/wiki/American_and_British_English_spelling_differences"}
+		 ]
+		},
+		{"name": "Remove 'www' subdomain",
+		 "resources":[
+			{"name":"BrowserShots.org",
+			 "link":"http://browsershots.org/"},
+			{"name":"Browserling.com",
+			 "link":"https://browserling.com/"},
+			{"name":"Spoon.net",
+		 	 "link":"http://spoon.net/browsers"}
+		 ]
+		},
+		{"name": "Check website in all browsers",
+		 "resources":[
+			{"name":"Remove 'www' in web.config",
+			 "link":"http://keyvan.io/remove-www-prefix-from-urls-with-url-rewrite-module-for-iis-7-0"}
+		 ]
+		}
+	]
+},
+{
+	"name":"Mobile",
+	"items":[
+		{"name": "MobileOK score of 75+",
+		 "resources":[
+			{"name":"W3C mobile checker", 
+			 "link":"http://validator.w3.org/mobile/"}
+		 ]
+		},
+		{"name": "Use 'viewport' meta-tag",
+		 "resources":[
+			{"name":"Don’t Forget the Viewport Meta Tag",
+			 "link":"http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag/"},
+			{"name":"Make your website mobile friendly",
+			 "link":"http://www.hanselman.com/blog/MakeYourWebsiteMobileAndIPhoneFriendlyAddHomeScreenIPhoneIconsAndAdjustTheViewPort.aspx"}
+		 ]
+		},
+		{"name": "Use correct input types",
+		 "resources":[
+			{"name":"Input type: Email, Url, Phone",
+			 "link":"http://html5tutorial.info/html5-contact.php"},
+			{"name":"Diving in to HTML5 forms",
+			 "link":"http://diveintohtml5.info/forms.html"}
+		 ]
+		},
+		{"name": "Manual check using emulator",
+		 "resources":[
+			{"name":"Online media query tester",
+			 "link":"http://screenqueri.es/"},
+			{"name":"6 free mobile emulators",
+			 "link":"http://www.webdesignerdepot.com/2012/11/6-free-mobile-device-emulators-for-testing-your-site/"},
+			{"name":"Opera Mobile Emulator",
+			 "link":"http://www.opera.com/developer/tools/mobile/"}
+		 ]
+		}
+	]
+}
+]
