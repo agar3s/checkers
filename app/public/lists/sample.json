@@ -1,5 +1,6 @@
 [{
 	"name":"Best practices",
+	"id":"1-1",
 	"items":[
 		{"name": "Fix broken links",
 		 "resources":[
@@ -39,6 +40,7 @@
 },
 {
 	"name":"Mobile",
+	"id":"1-2",
 	"items":[
 		{"name": "MobileOK score of 75+",
 		 "resources":[

@@ -1,23 +1,26 @@
 extends layout
 
-mixin renderItems(items)
-  ul
-    each item, i in items
-      li
-        input(type='checkbox', name='#{item.name}')
-        | #{item.name}
-        if item.resources
-          ul
-            each resource in item.resources
-              li
-                a(href="#{resource.link}", target="_blank") #{resource.name}
+mixin renderItems(name, items)
+  each item, i in items
+    dt
+      input(type='checkbox', name='#{item.name}', id='#{item.name}')
+      label(for='#{item.name}') #{item.name}
+      if item.items
+        a(href='#', data-items='sub-#{item.id}', class='expand')+
 
-        if item.items
-          mixin renderItems(item.items)
+    if item.resources
+        each resource in item.resources
+          dd
+            a(href="#{resource.link}", target="_blank") #{resource.name}
+
+      if item.items
+        dl(id='sub-#{item.id}', style='display:none')
+          mixin renderItems(item.name, item.items)
 
 block content
   h1= title
 
-  mixin renderItems(items)
+  section.list
+    dl
+      mixin renderItems('alo', items)
     
-
