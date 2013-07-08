@@ -1,10 +1,11 @@
 extends layout
 
-mixin renderItems(name, items)
+mixin renderItems(name, parentId, items)
   each item, i in items
-    dt
-      input(type='checkbox', name='#{item.name}', id='#{item.name}')
-      label(for='#{item.name}') #{item.name}
+    dt(data-parentId=parentId)
+      input(type='checkbox', name='#{item.name}', id='#{item.id}', class="check-progress")
+      label(for='#{item.id}') #{item.name}
+      span.progress 0% 
       if item.items
         a(href='#', data-items='sub-#{item.id}', class='expand')+
 
@@ -15,12 +16,12 @@ mixin renderItems(name, items)
 
       if item.items
         dl(id='sub-#{item.id}', style='display:none')
-          mixin renderItems(item.name, item.items)
+          mixin renderItems(item.name, item.id, item.items)
 
 block content
   h1= title
 
   section.list
     dl
-      mixin renderItems('alo', items)
+      mixin renderItems('web development', 0, items)
     
