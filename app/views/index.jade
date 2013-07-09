@@ -2,25 +2,27 @@ extends layout
 
 mixin renderItems(name, parentId, items)
   each item, i in items
-    dt(data-parentId=parentId)
+    dt(id='dt-'+item.id, data-parent-id=parentId, data-childs=item.items?item.items.length:0, data-progress=0)
       input(type='checkbox', name='#{item.name}', id='#{item.id}', class="check-progress")
       label(for='#{item.id}') #{item.name}
       span.progress 0% 
       if item.items
         a(href='#', data-items='sub-#{item.id}', class='expand')+
 
-    if item.resources
-        each resource in item.resources
-          dd
-            a(href="#{resource.link}", target="_blank") #{resource.name}
-
-      if item.items
-        dl(id='sub-#{item.id}', style='display:none')
+      dl(id='sub-#{item.id}', style='display:none')
+        if item.items
           mixin renderItems(item.name, item.id, item.items)
+
+    if item.resources
+      each resource in item.resources
+        dd
+          a(href="#{resource.link}", target="_blank") #{resource.name}
 
 block content
   h1= title
+  p= description
 
+  progress(id='root', max=100, min=0, value=0)
   section.list
     dl
       mixin renderItems('web development', 0, items)

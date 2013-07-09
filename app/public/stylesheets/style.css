@@ -6,8 +6,13 @@ body {
 a {
   color: #00B7FF;
 }
+ul > li {
+  display: inline-block;
+  margin: 0 3px;
+}
 dl {
   margin-left: 20px;
+  padding: 10px 0;
 }
 .expand {
   display: inline-block;
@@ -21,4 +26,14 @@ dl {
 }
 .progress {
   margin: 0 5px;
+  color: red;
+}
+dt[data-progress='100'] {
+  background-color: #AAFFBB;
+}
+progress {
+  display: block;
+  width: 90%;
+  padding: 0;
+  margin: 0 auto;
 }

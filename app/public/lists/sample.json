@@ -85,5 +85,56 @@
 		 ]
 		}
 	]
+},
+
+{
+	"name":"Analytics",
+	"id":"3",
+	"items":[
+		{"name": "Uptime monitoring",
+		 "id":"3-1",
+		 "resources":[
+		 	{"name":"Uptime robot",
+		 		"link":"http://www.uptimerobot.com/"
+		 	},
+		 	{"name":"GotSiteMonitor.com",
+		 		"link":"http://www.gotsitemonitor.com/"
+		 	}
+		 ]
+		},
+		{"name": "Traffic analysis",
+		 "id":"3-2",
+		 "items":[
+		 	{"name":"Google Analytics",
+		 		"link":"3-2-1"
+		 	},
+		 	{"name":"StatCounter",
+		 		"link":"3-2-2"
+		 	},
+		 	{"name":"Clicky",
+		 		"link":"3-2-3"
+		 	}
+		 ]
+		},
+		{"name": "testing childs",
+		 "id":"3-3",
+		 "items":[
+		 	{"name":"subtesting",
+		 		"id":"3-3-1"
+		 	},
+		 	{"name":"subtestings",
+		 		"id":"3-3-2",
+		 		"items":[
+		 		{"name":"subtesting3321",
+		 			"id":"3-3-2-1"
+		 		}]
+		 	},
+		 	{"name":"subtestings",
+		 		"id":"3-3-3"
+		 	}
+		 ]
+		}
+	]
 }
+
 ]
